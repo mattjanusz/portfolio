@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ballet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <div class="pc-navbar">
+      <div><i class=" ml-3 fas fa-code"></i></div>
+
+      <div class="navlink-div">
+        <a href="#contacts-div">contact</a> <a href="#projects-div">projects</a>
+      </div>
+    </div>
+
+    <div class="hero-outer-div">
+      <div class="hero-header-div">
+        <h1 class="name-header">Matt Janusz</h1>
+        <h4 class="web-dev-header">Full stack Developer</h4>
+      </div>
+    </div>
+    <div id="projects-div" class="projects-outer-div">
+      <div class="projects-header"><p>My Projects</p></div>
+      <div class="project-img-outer-div">
+        <div class="project-row-column">
+          <div class="project"></div>
+          <div class="project"></div>
+        </div>
+        <div class="project-row-column">
+          <div class="project"></div>
+          <div class="project"></div>
+        </div>
+      </div>
+    </div>
+    <div id="contacts-div" class="contact-outer-div">
+      <div class="container">
+        <form action="action_page.php">
+          <div class="contact-header">Contact Me</div>
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+          </select>
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="top-button"><i class="fas fa-angle-double-up"></i></div>
+    <footer class="footer">
+     
+      <div class="social-footer">
+        <div class="social-icon-div">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="mb-3 contact-footer">
+        <h2>Contact</h2>
+        <h5>Matt Janusz</h6>
+        <h6><i class="mr-2 fas fa-phone"></i>Phone:(602)561-8124</h6>
+      </div>
+      <p class="ml-3">&copy 2021 Matthew Janusz</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(".top-button").click(() => {
+        scroll(0, 0);
+      });
+
+      $(window).scroll(() => {
+        var scroll = window.pageYOffset;
+        if (scroll <= 500) {
+          $(".top-button").removeClass("button-out");
+        }
+        if (scroll >= 500) {
+          $(".top-button").addClass("button-out");
+        }
+      });
+      $(window).scroll(() => {
+        var scroll = window.pageYOffset;
+        if (scroll <= 50) {
+          $(".pc-navbar").addClass("pc-navbar-grow");
+        }
+        if (scroll > 50) {
+          $(".pc-navbar").removeClass("pc-navbar-grow");
+        }
+      });
+      $(window).scroll(() => {
+        var scroll = window.pageYOffset;
+        if (scroll <= 600) {
+          $(".body").removeClass("body2");
+        }
+        if (scroll > 600) {
+          $(".body").addClass("body2");
+        }
+      });
+    </script>
+  </body>
+</html>
